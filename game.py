@@ -25,8 +25,11 @@ import time
 import os
 # Импорт модуля os для очистки консоли
 
+import json
+
 from helicopter import Helicopter as Helico
 # Импорт класса Helicopter из модуля helicopter
+
 
 TICK_SLEEP = 0.3
 # Время задержки между каждым тактом
@@ -52,6 +55,10 @@ clouds = Clouds(MAP_W, MAP_H)
 helico = Helico(MAP_W, MAP_H)
 # Создание объекта Helicopter
 
+# Начало прослушивания ввода с клавиатуры
+
+tick = 1
+
 MOVES = {'w': (-1, 0), 'd': (0, 1), 's': (1, 0), 'a': (0, -1)}
 
 
@@ -62,6 +69,10 @@ def process_key(key):
     if c in MOVES.keys():
         dx, dy = MOVES[c][0], MOVES[c][1]
         helico.move(dx, dy)
+    if c == 'f':
+        data = {"helicopter": helico.export_data(), "clouds": clouds.export_data(), "field": field.export_data()}
+        with open("level.json", "w") as lvl:
+             json.dump(data, lvl)    
 
 
 # Функция для обработки ввода с клавиатуры и перемещения вертолета
@@ -72,9 +83,6 @@ listener = keyboard.Listener(
     on_release=process_key, )
 listener.start()
 
-# Начало прослушивания ввода с клавиатуры
-
-tick = 1
 
 # Очистка консоли один раз в начале с проверкой операционной системы, если windows то используется cls, если linux то clear
 os.system("cls" if os.name == "nt" else "clear")

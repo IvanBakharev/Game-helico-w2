@@ -101,3 +101,6 @@ class Clouds:
 
             # Устанавливаем значение ячейки в 0, чтобы удалить облако
             self.cells[y][x] = 0
+
+    def export_data(self):
+        return{"cells": self.cells}        

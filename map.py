@@ -126,3 +126,6 @@ class Map:
             if (helico.lives == 0):
                 helico.game_over()
     # Обработка воздействия вертолета на карту
+
+    def export_data(self):
+        return{"cells": self.cells}
