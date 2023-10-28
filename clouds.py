@@ -17,7 +17,7 @@ class Clouds:
         # В начале, все ячейки инициализируются значением 0, что обозначает "пусто".
         self.cells = [[0 for x in range(width)] for y in range(height)]
 
-    def spawn_cloud(self, size=1, type='normal'):
+    def spawn_cloud(self, size=2, type='normal'):
         """Генерация нового облака в случайном месте."""
         # Выбираем случайную X координату
         # для левого верхнего угла облака:

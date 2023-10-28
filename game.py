@@ -34,7 +34,7 @@ TICK_SLEEP = 0.3
 TREE_UPDATE = 40
 # Частота генерации новых деревьев
 
-CLOUDS_UPDATE = 1
+CLOUDS_UPDATE = 10
 # Частота обновления позиций облаков
 
 FIRE_UPDATE = 20
