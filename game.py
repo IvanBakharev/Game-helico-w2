@@ -34,7 +34,7 @@ TICK_SLEEP = 0.3
 TREE_UPDATE = 40
 # Частота генерации новых деревьев
 
-CLOUDS_UPDATE = 10
+CLOUDS_UPDATE = 8
 # Частота обновления позиций облаков
 
 FIRE_UPDATE = 20
@@ -95,6 +95,7 @@ while True:
         field.update_fire()
     if (tick % CLOUDS_UPDATE == 0):
         clouds.update()
+
 
 # Основной игровой цикл:
 # - Очистка консоли
