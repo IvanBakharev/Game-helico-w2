@@ -10,7 +10,7 @@ class Helicopter:
         self.tank = 0
         self.mxtank = 1
         self.score = 0
-        self.lives = 2000
+        self.lives = 10
 
 
     def move(self, dx, dy):

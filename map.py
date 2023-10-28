@@ -119,7 +119,7 @@ class Map:
             helico.mxtank += 1
             helico.score -= UPGRADE_COST
         if (c == 3 and helico.score >= LIFE_COST):
-            helico.lives += 1000
+            helico.lives += 10
             helico.score -= LIFE_COST
         if (d == 2):
             helico.lives -= 1
