@@ -2,7 +2,7 @@ from utils import randcell2
 from utils import randcell
 from utils import randbool
 
-# 🌳 🚁 🌊 🔥 🏥 ❤️ ⚡ 🏆 ☁️ 🧺 🏬
+# 🌳 🚁 🌊 🔥 🏥 ❤️ ⚡ 🏆 ☁️ 🧺 🏬 🟥 🟦
 
 from map import Map
 from pynput import keyboard
@@ -13,7 +13,7 @@ from clouds import Clouds
 
 TICK_SLEEP = 0.3
 TREE_UPDATE = 40
-CLOUDS_UPDATE = 20
+CLOUDS_UPDATE = 5
 FIRE_UPDATE = 10
 MAP_W, MAP_H = 20, 10
 
